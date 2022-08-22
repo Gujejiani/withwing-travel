@@ -1,0 +1,37 @@
+@import '../../../../assets/tools/tools.scss';
+
+
+
+.intro{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 30;
+    text-align: center;
+    @include part('title'){
+        font-weight: bold;
+       
+        
+    };
+
+    @include part('text'){
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 60px;
+        letter-spacing: 5px;
+        margin-top: 20px;
+  
+    }
+
+    @include part('button'){
+        margin-top: 40px;
+        display: inline-block;
+        padding: 20px 60px;
+        background-color:   #7AB730;
+        color: #fff;
+        letter-spacing: 1px;
+    }
+   
+}
