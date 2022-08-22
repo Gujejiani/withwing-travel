@@ -32,6 +32,11 @@
         background-color:   #7AB730;
         color: #fff;
         letter-spacing: 1px;
+        border: none;
+        cursor: pointer;
+        @include hover-supported(){
+            opacity: 0.9;
+        }
     }
    
 }
