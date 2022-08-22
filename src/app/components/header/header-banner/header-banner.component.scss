@@ -1,0 +1,47 @@
+@import '../../../../assets/tools/tools.scss';
+
+.banner{
+
+    position: absolute;
+    bottom: -40px;
+  z-index: 30;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 24px 40px;
+    background-color: #fff;
+    max-width: 800px;
+    width: 100%;
+    align-items: center;
+    transform: translateX(-50%);
+    @include element('name'){
+           font-weight: bold; 
+           margin: 0;
+           letter-spacing: 4px;
+           @include part('highlight'){
+            color: #7AB730;
+           }
+    }
+    
+
+}
+
+.nav{
+    @include element('list'){
+        display: flex;
+        @include part('li'){
+            list-style: none;
+            margin-left: 20px;
+           
+            a{
+                text-decoration: none;
+                color: black ;
+                font-weight: 500;
+                font-size: 16px;
+                @include hover-supported(){
+                    color: #7AB730;
+                }
+            }
+        }
+    }
+}
