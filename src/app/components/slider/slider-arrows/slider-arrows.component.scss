@@ -1,0 +1,31 @@
+@import '../../../../assets/tools/tools.scss';
+
+
+
+.arrow{
+   
+    @include part('icon'){
+       
+        z-index: 40;
+        color: rgb(156, 148, 148);
+        @include hover-supported(){
+            cursor: pointer;
+        }
+        @include modifier('right'){
+            position: absolute;
+            right: 100px;
+            top: 50%;
+            transform: translateY(-50%)
+        };
+        @include modifier('left'){
+            position: absolute;
+            left: 100px;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+    };
+
+   
+
+
+}

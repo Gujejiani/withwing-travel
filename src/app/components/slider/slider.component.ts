@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class SliderComponent implements OnInit {
 
   constructor() { }
-
+  sliderImgCount =1
+  sliderImg = `url(./assets/img/carousel-${this.sliderImgCount}.jpg)`
   ngOnInit(): void {
   }
 

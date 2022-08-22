@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderBannerComponent } from './components/header/header-banner/header-banner.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SliderIntroComponent } from './components/slider/slider-intro/slider-intro.component';
+import { SliderArrowsComponent } from './components/slider/slider-arrows/slider-arrows.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SliderIntroComponent } from './components/slider/slider-intro/slider-in
     HeaderComponent,
     HeaderBannerComponent,
     SliderComponent,
-    SliderIntroComponent
+    SliderIntroComponent,
+    SliderArrowsComponent
   ],
   imports: [
     BrowserModule,
