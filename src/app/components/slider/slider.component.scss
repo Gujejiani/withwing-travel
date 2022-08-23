@@ -1,13 +1,25 @@
+@use '../../../assets/tools/bem' as *;
+
+.wrapper{
+  position: relative;
+  overflow: hidden;
+ height: 100vh;
+}
 .slider{
     display: flex;
     width: 100%;
-    height: 100vh;
-    background-image: -webkit-image-set('../../../assets/img/carousel-1.jpg');
+    height: 100%;
+    position: absolute;
+    transition:all ease-in 0.5s;
+overflow: hidden;
 }
+
+
+
 .slider-overlay{
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: black;
     opacity: 0.7;
     z-index: 10;

@@ -1,6 +1,10 @@
-<div class="slider" [ngStyle]="{backgroundImage: sliderImg}" >
-    <div class="slider-overlay" ></div>
-
-    <app-slider-intro></app-slider-intro>
-    <app-slider-arrows></app-slider-arrows>
+<div class="wrapper"    >
+    <div class="slider-overlay"></div>
+    <div *ngFor="let item of sliderImages; let i = index" class="slider " [ngStyle]="{backgroundImage: addBackground(i+1)}">
+ 
+    
+ 
+</div>
+<app-slider-intro></app-slider-intro>
+<app-slider-arrows (sliderArrowClicked)="sliderArrowClicked($event)" ></app-slider-arrows>
 </div>

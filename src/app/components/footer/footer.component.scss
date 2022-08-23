@@ -1,0 +1,65 @@
+@use '../../../assets/tools/bem' as *;
+
+
+.footer{
+    background-color: #212121;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 200px;
+    @include element('about'){
+
+        @include part('name'){
+            color: #fff;
+            @include part('highlight'){
+                color: #7AB730;
+            }
+        };
+
+        @include part('text'){
+            color: gray;
+            max-width: 300px;
+        };
+        @include part('follow'){
+            color: #fff;
+            
+        }
+
+        @include part('social'){
+            color: #7AB730;
+            margin-top: 10px;
+            i:not(:first-child){
+                margin-left: 10px;
+            }
+
+        }
+
+    }
+
+    // Services 
+    @include element('services'){
+        @include part('title'){
+            color: #fff;
+        }
+        @include part('list'){
+            color: gray;
+            li{
+                margin-top: 10px;
+            }
+        }
+    }
+
+
+    // Contact
+    @include element('contact'){
+        @include part('title'){
+            color: #fff;
+        }
+
+        @include part('list'){
+            color: gray;
+            li{
+                margin-top: 10px;
+            }
+        }
+    }
+}

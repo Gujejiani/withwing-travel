@@ -1,0 +1,44 @@
+@import '../../../../assets/tools/tools.scss';
+.destination-item{
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    @include hover-supported(){
+      
+        .destination-item-img{
+            transform: scale(1.3);
+        }
+    }
+
+
+    @include element('overlay'){
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: .5s;
+    z-index: 1;
+   
+        
+        @include part('title'){
+            font-size: 20px;
+            font-weight: bold
+        };
+        @include part('cities'){
+
+        }
+    }
+
+    @include part('img'){
+        width: 350px;
+        transition: ease-out 0.4s all;
+    }
+}

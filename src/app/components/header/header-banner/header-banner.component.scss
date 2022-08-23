@@ -12,7 +12,9 @@
     background-color: #fff;
     max-width: 800px;
     width: 100%;
+    ;
     align-items: center;
+    left: 50%;
     transform: translateX(-50%);
     @include element('name'){
            font-weight: bold; 
@@ -32,6 +34,7 @@
         @include part('li'){
             list-style: none;
             margin-left: 20px;
+         
            
             a{
                 text-decoration: none;
@@ -39,6 +42,11 @@
                 font-weight: 500;
                 font-size: 16px;
                 @include hover-supported(){
+                    color: #7AB730;
+                }
+            }
+            @include modifier('active'){
+                a{
                     color: #7AB730;
                 }
             }

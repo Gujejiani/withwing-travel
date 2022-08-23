@@ -33,11 +33,13 @@
 }
 .nav{
     display: flex;
-    position: fixed;
+    position:relative;
     justify-content: space-between;
     width: 100%;
      max-width:800px;
+   
     padding: 20px 0;
+    padding-bottom: 60px;
     @include element('list'){
         display: flex;
         align-items: center;
