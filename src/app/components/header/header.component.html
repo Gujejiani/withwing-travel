@@ -8,7 +8,10 @@
             <mat-icon  >email </mat-icon> 
            <span class="header__info-contact header__info-contact--email"> withwing@info </span>     <mat-icon  >phone </mat-icon> <span class="header__info-contact">  +995 598 82 92 71 </span>
         </div>
-  
+        <h2 class="nav__title" >
+            WIDTH<span class="nav__title-highlight" >WING</span>
+    
+        </h2>
           
         <div class="nav__list" >
 
@@ -18,10 +21,18 @@
             <i class="fa fa-linkedin nav__list-icon fa-lg" aria-hidden="true"></i>
             <i class="fa fa-youtube nav__list-icon fa-lg" aria-hidden="true"></i>
         
-        
+            
         </div>
-       
         
+        <mat-icon (click)="menuClicked()" class="nav-menu" >menu </mat-icon> 
+      
     </nav>
+    <ul class="nav__mob" [ngClass]="{'nav__mob--show':showMenu}">
+        <li class="nav__mob-li nav__mob-li--active" > <a href=""  >Home</a></li> 
+        <li class="nav__mob-li" >  <a href=""  >About</a></li>  
+        <li class="nav__mob-li" >   <a href=""  >Services</a></li>
+        <li class="nav__mob-li" >   <a href=""  >Flights</a></li>
+        <li class="nav__mob-li" >   <a href=""  >Contact</a></li>
+      </ul>
     <app-header-banner></app-header-banner>
 </header>

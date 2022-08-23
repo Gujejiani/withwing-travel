@@ -9,8 +9,15 @@ import {  } from '@fortawesome/fontawesome-svg-core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  showMenu= false
   faCoffee = faCoffee;
   ngOnInit(): void {
+  }
+
+
+
+  menuClicked(){
+    this.showMenu = !this.showMenu
   }
 
 }

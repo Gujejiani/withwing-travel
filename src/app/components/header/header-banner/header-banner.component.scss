@@ -24,7 +24,9 @@
             color: #7AB730;
            }
     }
-    
+    @media only screen and (max-width: 962px) {
+        display: none;
+    }
 
 }
 
