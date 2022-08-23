@@ -14,6 +14,9 @@ import { HeaderBannerComponent } from './components/header/header-banner/header-
 import { SliderComponent } from './components/slider/slider.component';
 import { SliderIntroComponent } from './components/slider/slider-intro/slider-intro.component';
 import { SliderArrowsComponent } from './components/slider/slider-arrows/slider-arrows.component';
+import { DestinationsComponent } from './components/destinations/destinations.component';
+import { DestinationItemComponent } from './components/destinations/destination-item/destination-item.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { SliderArrowsComponent } from './components/slider/slider-arrows/slider-
     HeaderBannerComponent,
     SliderComponent,
     SliderIntroComponent,
-    SliderArrowsComponent
+    SliderArrowsComponent,
+    DestinationsComponent,
+    DestinationItemComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
