@@ -17,6 +17,9 @@ import { SliderArrowsComponent } from './components/slider/slider-arrows/slider-
 import { DestinationsComponent } from './components/destinations/destinations.component';
 import { DestinationItemComponent } from './components/destinations/destination-item/destination-item.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormComponent } from './components/form/form.component';
+import { FormWrapperComponent } from './ui/form-wrapper/form-wrapper.component';
+import { InputComponent } from './ui/form-wrapper/input/input.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { FooterComponent } from './components/footer/footer.component';
     SliderArrowsComponent,
     DestinationsComponent,
     DestinationItemComponent,
-    FooterComponent
+    FooterComponent,
+    FormComponent,
+    FormWrapperComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,

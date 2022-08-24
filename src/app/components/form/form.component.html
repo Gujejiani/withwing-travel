@@ -1,0 +1,18 @@
+<app-form-wrapper>
+   <div class="form">
+    <div class="form-holder">
+        <app-input [labelText]="'Name'" [idName]="'Name'"  ></app-input>
+    </div>
+    <div class="form-holder">
+        <app-input [labelText]="'Last Name'" [idName]="'Last Name'"  ></app-input>
+    </div>
+    <div class="form-holder">
+        <app-input [labelText]="'Middle Name'" [idName]="'Last Name'"  ></app-input>
+    </div>
+    <div class="form-holder">
+        <app-input  [placeHolder]="'Date'" (inputValueChanged)="inputChange($event)" [value]="dateValue"  [labelText]="'Date Of Birth'" [inputType]="'date'" [idName]="'Last Name'"  ></app-input>
+    </div>
+ 
+
+   </div>
+</app-form-wrapper>

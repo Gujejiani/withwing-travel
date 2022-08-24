@@ -1,0 +1,35 @@
+@use '../../../assets/tools/bem' as *;
+
+.form{
+    width: 100%;
+    color: #fff;
+    @include element('control'){
+        display: flex;
+        margin-bottom: 29px;
+        align-items: center;
+        
+   
+        @include part('label'){
+            width: 34.9%;
+            margin-right: 40px;
+        }
+        @include part('input'){
+        height: 41px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 5px;
+        width: 100%;
+        padding: 0 18px;
+        background: rgba(255, 255, 255, 0.2);
+        width: 65.1%;
+        outline: none;
+        color: #fff;
+        
+        &:focus{
+      
+            -webkit-box-shadow: 0 0 10px #fff;
+            box-shadow: 0 0 10px #fff;
+        }
+        
+        }
+    }
+}

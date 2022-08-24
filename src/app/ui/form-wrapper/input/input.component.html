@@ -1,0 +1,14 @@
+<div class="form-control">
+    <label  [for]="idName" class="form-control-label">{{labelText}}</label>
+    
+    <input *ngIf="inputType !=='date'; else datePicker" [id]="idName"   [placeholder]="placeHolder" [type]="'text'" class="form-control-input">
+   
+
+</div>
+
+
+
+<ng-template #datePicker>
+    <input [id]="idName" [value]="value" (click)="dateClicked()"  [placeholder]="placeHolder" [type]="'text'" class="form-control-input">
+    <input (change)="inputChange($event)" id="date" onfocus="this.showPicker()" class="form-control-date show" type="date">
+</ng-template>
