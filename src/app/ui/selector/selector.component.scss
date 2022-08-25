@@ -1,0 +1,52 @@
+@use '../../../assets/tools/tools.scss' as *;
+
+.form-control{
+    display: flex;
+    margin-bottom: 29px;
+    align-items: center;
+    position: relative;
+    
+    @include part('label'){
+        width: 34.9%;
+        margin-right: 40px;
+    }
+    @include part('select'){
+        height: 41px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        background: none;
+        border-radius: 5px;
+        width: 100%;
+        padding: 0 18px;
+        background: rgba(255, 255, 255, 0.2);
+        outline: none;
+        color: #fff;
+        width: 65.1%;
+        text-transform: uppercase;
+        -webkit-appearance: none;
+         cursor: pointer;
+        .option{
+            font-weight: normal;
+            display: block;
+            white-space: nowrap;
+            min-height: 1.2em;
+            padding: 0px 2px 1px; 
+            color: #999; 
+            padding: 10px;
+        }
+    }
+}
+
+.checkbox-circle{
+    display: flex;
+    justify-content: space-between;
+    width: 65.1%;
+    label {
+        cursor: pointer;
+        display: inline-block;
+        padding-left: 0px;
+        position: relative;
+        margin-right: 0;
+        width: auto;
+        font-size: 14px;
+    }
+}

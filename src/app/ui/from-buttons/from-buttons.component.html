@@ -1,0 +1,18 @@
+<div class="actions clearfix">
+    <ul class="actions-menu" >
+        
+        <li  class="label" [ngClass]="{'label--hide': !showPrev}"  aria-disabled="false">
+          
+            <button  >  <i class="fa fa-arrow-left" aria-hidden="true"style="margin-right: 10px" ></i> Back</button>
+        </li>
+        
+        <li class="label"  [ngClass]="{'label--hide': !showNext}">
+            <button [disabled]="showNext"  href="#next" role="menuitem">Continue 
+                  <i class="fa fa-arrow-right" style="margin-left: 10px" aria-hidden="true"></i> </button>
+        </li>
+        <li *ngIf="showSubmit" class="label" [ngClass]="{'label--hide': !showSubmit}" >
+            <button [disabled]="showSubmit" type="submit" role="menuitem"  >Submit  
+                 <i class="fa fa-arrow-right" style="margin-left: 10px" aria-hidden="true"></i></button>
+        </li>
+    </ul>
+</div>

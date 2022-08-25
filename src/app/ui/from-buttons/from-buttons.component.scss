@@ -1,0 +1,65 @@
+@use '../../../assets/tools/tools.scss' as *;
+
+
+.actions{
+
+    @include part('menu'){
+ 
+        display: flex;
+        margin-top: 19px;
+        justify-content: space-between;
+      
+   
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        .label {
+            display: list-item;
+            text-align: -webkit-match-parent;
+             button {
+                padding: 0;
+                border: none;
+                display: inline-flex;
+                height: 54px;
+                width: 180px;
+                letter-spacing: 1.3px;
+                align-items: center;
+                background: #e4bd37;
+                font-family: "Muli-Bold";
+                cursor: pointer;
+                position: relative;
+                padding-left: 44px;
+                text-transform: uppercase;
+                color: #fff;
+                border-radius: 27px;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+               -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                text-decoration: none;
+                display: flex;
+                text-align: center;
+                @include hover-supported(){
+                    background: #cda628;
+                }
+            }
+            &:first-child button {
+                width: 136px;
+                background: #fff;
+                padding-left: 34px;
+                color: #666;
+                font-family: "Muli-Bold";
+                @include hover-supported(){
+                    background: #f7f3de;
+                }
+               
+            }
+            @include modifier('hide'){
+            visibility: hidden;
+            }
+
+        }
+    }
+    
+
+}
