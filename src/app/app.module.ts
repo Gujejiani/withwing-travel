@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HomeComponent } from './containers/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material/material.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderBannerComponent } from './components/header/header-banner/header-banner.component';
 import { SliderComponent } from './components/slider/slider.component';
@@ -19,7 +19,13 @@ import { DestinationItemComponent } from './components/destinations/destination-
 import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/form.component';
 import { FormWrapperComponent } from './ui/form-wrapper/form-wrapper.component';
-import { InputComponent } from './ui/form-wrapper/input/input.component';
+import { InputComponent } from './ui/input/input.component';
+import { SelectorComponent } from './ui/selector/selector.component';
+import { FromButtonsComponent } from './ui/from-buttons/from-buttons.component';
+import { FormLoadingComponent } from './ui/form-loading/form-loading.component';
+import { FormClientComponent } from './components/form-client/form-client.component';
+import { FormAdressComponent } from './components/form-adress/form-adress.component';
+import { FormIdentityComponent } from './components/form-identity/form-identity.component';
 
 
 @NgModule({
@@ -37,7 +43,13 @@ import { InputComponent } from './ui/form-wrapper/input/input.component';
     FooterComponent,
     FormComponent,
     FormWrapperComponent,
-    InputComponent
+    InputComponent,
+    SelectorComponent,
+    FromButtonsComponent,
+    FormLoadingComponent,
+    FormClientComponent,
+    FormAdressComponent,
+    FormIdentityComponent
   ],
   imports: [
     BrowserModule,
@@ -45,8 +57,8 @@ import { InputComponent } from './ui/form-wrapper/input/input.component';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    FontAwesomeModule
-    
+    FontAwesomeModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

@@ -1,0 +1,27 @@
+<form class="form">
+    <h3 class="form-title" >Adress</h3>
+    <div class="form-holder">
+        <app-input [labelText]="'Index'" [idName]="'index'"  ></app-input>
+    </div>
+  
+    <!-- <div class="form-holder">
+        <app-input [labelText]="'Phone Number'" [idName]="'Last Name'"  ></app-input>
+    </div> -->
+ 
+   
+    <div class="form-holder">
+        <app-selector  [optionsSelector]="true"  [labelText]="'Country'"  [multiSelectorItems]="['Georgia', 'Germany', 'Brazil', 'Tunisia', 'Spain']" ></app-selector>
+    </div>
+    <div class="form-holder">
+        <app-selector  [optionsSelector]="true"  [labelText]="'City'"  [multiSelectorItems]="['Tbilisi', 'Berlin', 'Brazil', 'Madrid']" ></app-selector>
+    </div>
+    <div class="form-holder">
+        <app-input [labelText]="'Street'" [idName]="'Street'"  ></app-input>
+    </div>
+    <div class="form-holder">
+        <app-input [labelText]="'House'" [idName]="'Street'"  ></app-input>
+    </div>
+
+   
+
+   </form>

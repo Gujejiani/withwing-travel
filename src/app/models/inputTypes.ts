@@ -1,1 +1,1 @@
-export type InputTypes = 'text' | 'date'
+export type InputTypes = 'text' | 'date' | 'radio' | 'checkbox'

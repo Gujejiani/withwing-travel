@@ -1,21 +1,4 @@
-<app-form-wrapper  >
-   
-
-
- <router-outlet></router-outlet>
-
-
-
-<app-from-buttons (formNavigated)="formNavTriggered($event)" [showSubmit]="currentPage ===FORM_PAGE.CLIENT_FORM_IDENTITY" [showPrev]="showPrev" [showNext]="true" ></app-from-buttons>
-
-     
-<app-form-loading  [secondPage]="currentPage ===FORM_PAGE.CLIENT_FORM_ADRESS" [lastPage]="currentPage ===FORM_PAGE.CLIENT_FORM_IDENTITY"  ></app-form-loading>
-
-
-</app-form-wrapper>
-<!-- <app-form-wrapper  >
-   
-   <form class="form">
+<form class="form">
     <h3 class="form-title" >Personal Information</h3>
     <div class="form-holder">
         <app-input [labelText]="'Full Name'" [idName]="'Name'"  ></app-input>
@@ -42,10 +25,6 @@
      
         </label>
 </div>
-<app-from-buttons (formNavigated)="formNavTriggered($event)" [showNext]="true" ></app-from-buttons>
+
 
    </form>
-
-   <app-form-loading></app-form-loading>
-
-</app-form-wrapper> -->

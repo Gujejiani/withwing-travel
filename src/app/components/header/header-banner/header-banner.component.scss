@@ -17,6 +17,7 @@
     left: 50%;
     transform: translateX(-50%);
     @include element('name'){
+        cursor: pointer;
            font-weight: bold; 
            margin: 0;
            letter-spacing: 4px;
@@ -54,4 +55,7 @@
             }
         }
     }
+}
+.active{
+    color: #7AB730 !important;
 }

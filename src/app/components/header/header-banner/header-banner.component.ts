@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormPage } from 'src/app/models/formPage';
 
 @Component({
   selector: 'app-header-banner',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderBannerComponent implements OnInit {
 
   constructor() { }
-
+  formPage = FormPage;
   ngOnInit(): void {
   }
 

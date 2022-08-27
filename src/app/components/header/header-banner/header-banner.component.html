@@ -1,15 +1,17 @@
 <div class="banner">
-    <h2 class="banner__name" >
+    <h2 routerLink="/" class="banner__name" >
         WIDTH<span class="banner__name-highlight" >WING</span>
 
     </h2>
     <nav class="nav" >
         <ul class="nav__list">
-          <li class="nav__list-li nav__list-li--active"> <a href=""  >Home</a></li> 
+          <li class="nav__list-li  "> <a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"  routerLink="/"  >Home</a></li> 
           <li class="nav__list-li">  <a href=""  >About</a></li>  
           <li class="nav__list-li">   <a href=""  >Services</a></li>
           <li class="nav__list-li">   <a href=""  >Flights</a></li>
           <li class="nav__list-li">   <a href=""  >Contact</a></li>
+          <li class="nav__list-li">   <a  routerLink="/client-form"  >Login</a></li>
+          <li class="nav__list-li">   <a routerLinkActive="active" routerLink="/client-form/client"  >SignUp</a></li>
         </ul>
     </nav>
 </div>

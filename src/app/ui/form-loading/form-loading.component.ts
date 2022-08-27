@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-form-loading',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-loading.component.scss']
 })
 export class FormLoadingComponent implements OnInit {
-
+  @Input() secondPage: boolean =false
+  @Input() lastPage: boolean =false
   constructor() { }
 
   ngOnInit(): void {

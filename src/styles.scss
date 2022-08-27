@@ -1,6 +1,6 @@
 
 
-
+@use './assets/tools/bem' as *;
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -54,3 +54,69 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; box-sizing:
 	box-sizing: border-box;
 }
 
+a{
+	text-decoration: none;
+}
+
+
+
+.form{
+    width: 100%;
+    color: #fff;
+    @include part('title'){
+        font-size: 22px;
+        text-transform: uppercase;
+       text-align: center;
+        letter-spacing: 3px;
+       
+    
+    }
+    @include part('holder'){
+        @include modifier('checkbox'){
+            display: flex;
+            justify-content: space-between;
+            label{
+                cursor: pointer;
+                display: inline-block;
+                padding-left: 23px;
+                position: relative;
+                margin-right: 0;
+                width: auto;
+            } 
+           .checkmark {
+                position: absolute;
+                top: 4px;
+                left: 0;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                border: 1px solid rgba(255, 255, 255, 0.4);
+
+              
+                @include part('selected'){
+                    display: inline-block;
+                    top: 3px;
+                    left: 3px;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    position: absolute;
+                    background: #fff;
+                    visibility: hidden;
+                    
+                    @include modifier('show'){
+                        visibility: visible;
+                    }
+                   
+                }
+            
+            }
+            input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                
+            }
+        }
+    }
+}
