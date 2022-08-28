@@ -1,0 +1,67 @@
+@use '../../../assets/tools/tools.scss' as *;
+
+.wrapper{
+ height: 80vh;
+    
+
+ padding-top: 100px;
+}
+
+.profile{
+  
+    background-color: #f5f6f5;
+    @include part('title'){
+        
+        color: #7AB730;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+    z-index: 30;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 24px 40px;
+    max-width: 800px;
+    width: 100%;
+   
+    margin: auto;
+    @include element('img'){
+      
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        img{
+           
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #d8dcd2;
+           
+        }
+       @include part('name'){
+        color: #7AB730;
+        letter-spacing: 4px;
+        white-space: 'nowrap' !important;
+        margin-top: 10px;
+       }
+    }
+
+    @include element('info'){
+        flex: 1;
+        color: #000;
+        letter-spacing: 2px;
+        div{
+            margin-top: 10px;
+        }
+        @include part('title'){
+            font-weight: bold;
+        }
+        @include part('value'){
+            color: #7AB730;
+            letter-spacing: 4px;
+        }
+    }
+  
+}
