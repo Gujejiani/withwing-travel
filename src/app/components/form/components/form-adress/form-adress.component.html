@@ -13,6 +13,8 @@
             <option  *ngFor="let name of ['Georgia', 'Germany', 'Brazil', 'Tunisia', 'Spain'];" [value]="name" class="option">{{name}}</option>
       
             </select>   
+            <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+
     </div>
     <div class="form-control">
         <label  for="index" class="form-control-label">Area</label>
@@ -24,7 +26,9 @@
         <select formControlName="city" class="form-control-select">
             <option  *ngFor="let name of ['Tbilisi', 'Berlin', 'Brazil', 'Madrid'];" [value]="name" class="option">{{name}}</option>
       
-            </select>   
+            </select>  
+            <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+ 
     </div>
 
     <div class="form-control">

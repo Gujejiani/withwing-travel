@@ -11,7 +11,7 @@
           <div><span class="profile__info-title"  > Birth Date: </span > <span class="profile__info-value">{{user?.birthDate}}</span>    </div>  
           <div><span class="profile__info-title"  > Phone Number: </span > <span class="profile__info-value">{{user?.phoneNumber}}</span>    </div>  
           <div><span class="profile__info-title"  > Gender: </span > <span class="profile__info-value">{{user?.gender}}</span>    </div>  
-          <div><span class="profile__info-title"  > Client Groups: </span > <span class="profile__info-value">{{'client groyp'}}</span>    </div>  
+          <div><span class="profile__info-title"  > Client Groups: </span > <span class="profile__info-value"> <span *ngFor="let name of user?.clientGroups, let i = index" [style]="{'marginLeft': i!==0 ? '10px': '0'}" >{{name}},</span> </span>    </div>  
           <div><span class="profile__info-title"  > Coordinator: </span > <span class="profile__info-value">{{user?.coordinator}}</span>    </div>  
           <div><span class="profile__info-title"  > index: </span > <span class="profile__info-value">{{user?.index}}</span>    </div>  
           <div><span class="profile__info-title"  > Country: </span > <span class="profile__info-value">{{user?.country}}</span>    </div>  

@@ -148,6 +148,10 @@ a{
             flex-wrap: wrap;
           
           }
+        i{
+            position: absolute;
+            right: 20px;
+        }  
     }
     @include part('help'){
         position: absolute;
@@ -185,3 +189,16 @@ input.ng-invalid.ng-touched {
     border: 1px solid #dc3545 !important;
    
 }
+
+
+// Google auto complete background problem
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+::-webkit-file-upload-button {
+    display: none;
+ }

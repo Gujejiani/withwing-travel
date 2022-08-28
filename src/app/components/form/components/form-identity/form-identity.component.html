@@ -6,6 +6,8 @@
             <option  *ngFor="let name of ['Passport', 'Birth Certificate', 'Driving License'];" [value]="name" class="option">{{name}}</option>
       
             </select>   
+            <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+
     </div>
     <div class="form-control">
         <label  for="Series" class="form-control-label">Series</label>
@@ -32,7 +34,7 @@
     <div class="form-control">
         <label  for="file" class="form-control-label">File (File upload)</label>
     
-    <input id="file" (change)="onFileChange($event)" [type]="'file'" formControlName="file"  class="form-control-input">
+    <input style="padding-top: 10px;" id="file" (change)="onFileChange($event)" [type]="'file'" formControlName="file"  class="form-control-input">
     </div>
   
 
