@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import {  NavigationEnd, Router } from '@angular/router';
+import { filter, Subject, takeUntil } from 'rxjs';
 import { Directions } from 'src/app/models/directions';
 import { FormPage } from 'src/app/models/formPage';
 
@@ -10,47 +10,37 @@ import { FormPage } from 'src/app/models/formPage';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit {
+export class FormComponent implements OnInit, OnDestroy {
+  private unsubscribe$: Subject<void> = new Subject();
   showPrev =false
   direction = Directions
   FORM_PAGE= FormPage
   currentPage = FormPage.CLIENT_FORM
-  constructor(private activeRoute: ActivatedRoute, private router: Router) { }
+  constructor( private router: Router) { }
   ngOnInit(): void {
-    console.log(this.activeRoute.snapshot.queryParams)
-
-    if(this.router.url.includes('address') ||  this.router.url.includes('identity')){
-      this.showPrev =true
-    }
-  }
-  formNavTriggered(direction: Directions){
-    if(direction ===this.direction.RIGHT && !this.router.url.includes('address')){
-    this.router.navigate(['/client-form/client/address'])
+   this.router.events.pipe(takeUntil(this.unsubscribe$), filter(ev=> ev instanceof NavigationEnd)).subscribe((urlInfo)=>{
+    const nav = urlInfo as NavigationEnd
+      console.log(nav.url)
+    if(nav.url.includes('identity')){
+      this.currentPage = this.FORM_PAGE.CLIENT_FORM_IDENTITY
+    }else if(nav.url.includes('address')){
       this.currentPage = this.FORM_PAGE.CLIENT_FORM_ADRESS
-      this.showPrev =true
+    }else if(nav.url.includes('client') ){
+      this.currentPage = this.FORM_PAGE.CLIENT_FORM
     }
+   })
 
   
-    if(direction===this.direction.RIGHT && this.router.url.includes('address')){
-      this.router.navigate(['/client-form/client/identity'])
-      this.currentPage = this.FORM_PAGE.CLIENT_FORM_IDENTITY
-    } 
+}
 
-    if(direction === this.direction.LEFT && this.router.url.includes('identity')){
-      this.router.navigate(['/client-form/client/address'])
-      this.currentPage = this.FORM_PAGE.CLIENT_FORM_ADRESS
-    }
+  
 
-    if(direction ===this.direction.LEFT && this.router.url.includes('address')){
-      this.router.navigate(['/client-form/client'])
-      this.currentPage = this.FORM_PAGE.CLIENT_FORM
-      this.showPrev =false
-    }
+ngOnDestroy(): void {
+  this.unsubscribe$.next()
+  this.unsubscribe$.complete()
+}
+  
 
-   
-
-    console.log(direction)
-  }
 
 
 }

@@ -6,46 +6,12 @@
 
 
 
-<app-from-buttons (formNavigated)="formNavTriggered($event)" [showSubmit]="currentPage ===FORM_PAGE.CLIENT_FORM_IDENTITY" [showPrev]="showPrev" [showNext]="true" ></app-from-buttons>
+<!-- <app-from-buttons (formNavigated)="formNavTriggered($event)" [showSubmit]="currentPage ===FORM_PAGE.CLIENT_FORM_IDENTITY" [showPrev]="showPrev" [showNext]="true" ></app-from-buttons> -->
 
      
 <app-form-loading  [secondPage]="currentPage ===FORM_PAGE.CLIENT_FORM_ADRESS" [lastPage]="currentPage ===FORM_PAGE.CLIENT_FORM_IDENTITY"  ></app-form-loading>
 
 
 </app-form-wrapper>
-<!-- <app-form-wrapper  >
-   
-   <form class="form">
-    <h3 class="form-title" >Personal Information</h3>
-    <div class="form-holder">
-        <app-input [labelText]="'Full Name'" [idName]="'Name'"  ></app-input>
-    </div>
-    <div class="form-holder">
-        <app-input  [placeHolder]="'Date'" (inputValueChanged)="inputChange($event)" [value]="dateValue"  [labelText]="'Date Of Birth'" [inputType]="'date'" [idName]="'Last Name'"  ></app-input>
-    </div>
-    <div class="form-holder">
-        <app-input [labelText]="'Phone Number'" [idName]="'Last Name'"  ></app-input>
-    </div>
-    <div class="form-holder">
-        <app-selector  [labelText]="'Gender'" [singleSelector]="true" [multiSelectorItems]="['Male', 'Female', 'Other']" ></app-selector>
-    </div>
-    <div class="form-holder">
-        <app-selector  [inputType]="'checkbox'" [labelText]="'Client group'"  [multiSelectorItems]="['VIP Clients', 'Loyal Clients', 'New Clients']" ></app-selector>
-    </div>
-    <div class="form-holder">
-        <app-selector  [optionsSelector]="true"  [labelText]="'Coordinator'"  [multiSelectorItems]="['Jurgen Klop', 'Jhones', 'Kelvin Smith']" ></app-selector>
-    </div>
-    <div class="form-holder form-holder--checkbox" style="margin-bottom: 48px;">
-        <label>
-        <input (change)="smsCheckBoxCLicked($event)" type="checkbox" checked="">Do not send SMS
-        <span class="checkmark">    <span class="checkmark-selected" ></span></span>
-     
-        </label>
-</div>
-<app-from-buttons (formNavigated)="formNavTriggered($event)" [showNext]="true" ></app-from-buttons>
 
-   </form>
 
-   <app-form-loading></app-form-loading>
-
-</app-form-wrapper> -->

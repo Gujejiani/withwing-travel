@@ -1,0 +1,62 @@
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()" class="form">
+    <h3 class="form-title" >Personal Information</h3>
+    <div class="form-control">
+        <label  for="Name" class="form-control-label">fullName</label>
+    
+    <input [id]="'Name'" formControlName="fullName"  [type]="'text'" class="form-control-input">
+    </div>
+    <div class="form-control">
+        <label  for="date" class="form-control-label">Birth Date</label>
+        <input  (click)="dateClicked()"  [value]="dateValue" [type]="'text'" class="form-control-input">
+    <input formControlName="birthDate" (change)="inputChange($event)" id="date" onfocus="this.showPicker()" class="form-control-date show" type="date">
+      
+</div>
+   
+    <div class="form-control">
+       
+        <label  for="phone" class="form-control-label">Phone Number</label>
+    
+        <input id="phone"  formControlName="phoneNumber"  type="text" class="form-control-input">
+        <span *ngIf="!clientForm.get('phoneNumber')?.valid && clientForm.get('phoneNumber')?.touched" class="form-help" >Phone Numbers have to be 11 digits</span> 
+    </div>
+    <div class="form-control">
+        <label   class="form-control-label">Gender</label>
+        <div class="checkbox-circle" >
+            <label  *ngFor="let name of ['Male', 'Female', 'Other']; let i = index" >
+                <input formControlName='gender'   [id]="name" type='radio'  [value]="name" > {{name}}<br>
+                <span class="checkmark"></span>
+                </label> 
+        </div>      
+    </div>
+    <div class="form-control">
+        <label   class="form-control-label">Client group</label>
+        <div   class="checkbox-circle" >
+            <label  *ngFor="let name of ['VIP Clients', 'Loyal Clients', 'New Clients']; let i = index" >
+                <input [class]="name.trim()" (change)="onCheckboxChange($event)"  [id]="name" type='checkbox' [value]="name"  > {{name}}<br>
+                <span class="checkmark"></span>
+                </label> 
+        </div>      
+    </div>
+    <div class="form-control">
+        <label   class="form-control-label">Coordinator</label>
+        <select name="" formControlName="coordinator"  id="" class="form-control-select">
+            <option  *ngFor="let name of ['Jurgen Klop', 'Jhones', 'Kelvin Smith'];" [value]="name" class="option">{{name}}s</option>
+      
+            </select>   
+    </div>
+  
+
+    <div class="form-holder form-holder--checkbox" style="margin-bottom: 48px;">
+        <label>
+        <input formControlName="notSendSms"  (change)="smsCheckBoxCLicked($event)" type="checkbox" checked="">Do not send SMS
+        <span class="checkmark">    <span class="checkmark-selected" ></span></span>
+     
+        </label>
+</div>
+<app-from-buttons  [disabled]="!clientForm.valid" [showNext]="true" ></app-from-buttons>
+
+
+   </form>
+
+
+

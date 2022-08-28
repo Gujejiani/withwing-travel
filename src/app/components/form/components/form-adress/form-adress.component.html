@@ -1,0 +1,43 @@
+<form [formGroup]="addressForm"  class="form">
+    <h3 class="form-title" >Adress</h3>
+    
+    <div class="form-control">
+        <label  for="index" class="form-control-label">Index</label>
+    
+    <input formControlName="index" id="index"  [type]="'text'" class="form-control-input">
+    </div>
+ 
+    <div class="form-control">
+        <label   class="form-control-label">Country</label>
+        <select  formControlName="country"  class="form-control-select">
+            <option  *ngFor="let name of ['Georgia', 'Germany', 'Brazil', 'Tunisia', 'Spain'];" [value]="name" class="option">{{name}}</option>
+      
+            </select>   
+    </div>
+    <div class="form-control">
+        <label  for="index" class="form-control-label">Area</label>
+    
+    <input formControlName="area" id="index"  [type]="'text'" class="form-control-input">
+    </div>
+    <div class="form-control">
+        <label   class="form-control-label">City</label>
+        <select formControlName="city" class="form-control-select">
+            <option  *ngFor="let name of ['Tbilisi', 'Berlin', 'Brazil', 'Madrid'];" [value]="name" class="option">{{name}}</option>
+      
+            </select>   
+    </div>
+
+    <div class="form-control">
+        <label   for="street" class="form-control-label">Street</label>
+    
+    <input id="street"  formControlName="street"  [type]="'text'" class="form-control-input">
+    </div>
+    <div class="form-control">
+        <label  for="house" class="form-control-label">House</label>
+    
+    <input id="house" formControlName="house"   [type]="'text'" class="form-control-input">
+    </div>
+   
+    <app-from-buttons [disabled]="!addressForm.valid" (formNavigated)="onSubmit($event)"  [showPrev]="true"  [showNext]="true" ></app-from-buttons>
+
+   </form>

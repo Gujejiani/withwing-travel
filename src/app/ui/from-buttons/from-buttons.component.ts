@@ -10,6 +10,7 @@ import { Directions } from 'src/app/models/directions';
 export class FromButtonsComponent implements OnInit {
 
   constructor() { }
+  @Input() disabled =false
   @Input() showPrev: boolean =false;
   @Input() showNext: boolean =false;
   @Input() showSubmit: boolean =false;

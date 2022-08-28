@@ -11,10 +11,10 @@
         position: relative;
       
       
-        .label {
+        .list {
             display: list-item;
             text-align: -webkit-match-parent;
-             button {
+             @include element('button') {
                 padding: 0;
                 border: none;
                 display: inline-flex;
@@ -41,6 +41,19 @@
                 @include hover-supported(){
                     background: #cda628;
                 }
+
+                @include modifier('disabled'){
+                    cursor: default;
+                    opacity: 0.5;
+                }
+
+                @media only screen and (max-width: 600px) {
+                    width: 120px;
+                    font-size: 14px;
+                  padding-left: 10px;
+                  }
+
+
             }
             &:first-child button {
                 width: 136px;
@@ -51,6 +64,12 @@
                 @include hover-supported(){
                     background: #f7f3de;
                 }
+                @media only screen and (max-width: 600px) {
+                    width: 120px;
+                    font-size: 14px;
+                    padding-left: 20px;
+                
+                  }
                
             }
             @include modifier('hide'){

@@ -8,7 +8,7 @@
             <mat-icon  >email </mat-icon> 
            <span class="header__info-contact header__info-contact--email"> withwing@info </span>     <mat-icon  >phone </mat-icon> <span class="header__info-contact">  +995 598 82 92 71 </span>
         </div>
-        <h2 class="nav__title" >
+        <h2 routerLink="/" class="nav__title" >
             WIDTH<span class="nav__title-highlight" >WING</span>
     
         </h2>
@@ -33,8 +33,11 @@
         <li class="nav__mob-li" >   <a href=""  >Services</a></li>
         <li class="nav__mob-li" >   <a href=""  >Flights</a></li>
         <li class="nav__mob-li" >   <a href=""  >Contact</a></li>
-        <li class="nav__mob-li" >   <a href=""  >Login</a></li>
-        <li class="nav__mob-li" >   <a href=""  >Sign UP</a></li>
+        <li *ngIf="!isLoggedIn" class="nav__mob-li" >   <a href=""  >Login</a></li>
+        <li *ngIf="!isLoggedIn" class="nav__mob-li" >   <a  routerLinkActive="active" routerLink="/client-form/client"  >Sign UP</a></li>
+        <li *ngIf="isLoggedIn" class="nav__mob-li" >   <a routerLinkActive="active" routerLink="/client-form/client"  >From</a></li>
+        <li *ngIf="isLoggedIn" class="nav__mob-li" >   <a routerLinkActive="active" routerLink="/created-client"  >Profile</a></li>
+
       </ul>
     <app-header-banner></app-header-banner>
 </header>

@@ -10,8 +10,12 @@
           <li class="nav__list-li">   <a href=""  >Services</a></li>
           <li class="nav__list-li">   <a href=""  >Flights</a></li>
           <li class="nav__list-li">   <a href=""  >Contact</a></li>
-          <li class="nav__list-li">   <a  routerLink="/client-form"  >Login</a></li>
-          <li class="nav__list-li">   <a routerLinkActive="active" routerLink="/client-form/client"  >SignUp</a></li>
+          <li *ngIf="!isLoggedIn" class="nav__list-li">   <a  routerLink="/client-form"  >Login</a></li>
+          <li *ngIf="!isLoggedIn" class="nav__list-li">   <a routerLinkActive="active" routerLink="/client-form/client"  >SignUp</a></li>
+          <li *ngIf="isLoggedIn" class="nav__list-li">   <a routerLinkActive="active" routerLink="/client-form/client"  >Form</a></li>
+          <li *ngIf="isLoggedIn" class="nav__list-li">   <a routerLinkActive="active" routerLink="/created-client"  >Profile</a></li>
+
+
         </ul>
     </nav>
 </div>

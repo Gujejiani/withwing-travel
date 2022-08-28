@@ -8,7 +8,7 @@ import { HomeComponent } from './containers/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material/material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {  ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderBannerComponent } from './components/header/header-banner/header-banner.component';
 import { SliderComponent } from './components/slider/slider.component';
@@ -23,9 +23,10 @@ import { InputComponent } from './ui/input/input.component';
 import { SelectorComponent } from './ui/selector/selector.component';
 import { FromButtonsComponent } from './ui/from-buttons/from-buttons.component';
 import { FormLoadingComponent } from './ui/form-loading/form-loading.component';
-import { FormClientComponent } from './components/form-client/form-client.component';
-import { FormAdressComponent } from './components/form-adress/form-adress.component';
-import { FormIdentityComponent } from './components/form-identity/form-identity.component';
+import { FormClientComponent } from './components/form/components/form-client/form-client.component';
+import { FormAdressComponent } from './components/form/components/form-adress/form-adress.component';
+import { FormIdentityComponent } from './components/form/components/form-identity/form-identity.component';
+import { ProfileComponent } from './containers/profile/profile.component';
 
 
 @NgModule({
@@ -49,14 +50,14 @@ import { FormIdentityComponent } from './components/form-identity/form-identity.
     FormLoadingComponent,
     FormClientComponent,
     FormAdressComponent,
-    FormIdentityComponent
+    FormIdentityComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule,
     FontAwesomeModule,
     ReactiveFormsModule
 

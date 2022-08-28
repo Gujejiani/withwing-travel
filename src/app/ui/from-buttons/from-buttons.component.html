@@ -1,17 +1,17 @@
 <div class="actions ">
     <ul class="actions-menu" >
         
-        <li  class="label" [ngClass]="{'label--hide': !showPrev}"  aria-disabled="false">
+        <li  class="list" [ngClass]="{'list--hide': !showPrev}"  aria-disabled="false">
           
-            <button (click)="formButtonSlicked(directions.LEFT)"  >  <i class="fa fa-arrow-left" aria-hidden="true"style="margin-right: 10px" ></i> Back</button>
+            <button class="list__button"  (click)="formButtonSlicked(directions.LEFT)"  >  <i class="fa fa-arrow-left" aria-hidden="true"style="margin-right: 10px" ></i> Back</button>
         </li>
         
-        <li class="label" [style]="{'display': showSubmit? 'none': 'inline-block'}"  [ngClass]="{'label--hide': !showNext }">
-            <a   ><button (click)="formButtonSlicked(directions.RIGHT)"  [disabled]="!showNext "  href="#next" role="menuitem">Continue 
+        <li class="list" [style]="{'display': showSubmit? 'none': 'inline-block'}"  [ngClass]="{'list--hide': !showNext }">
+            <a   ><button class="list__button" [disabled]="!showSubmit || disabled"  [ngClass]="{'list__button--disabled': disabled }" (click)="!disabled? formButtonSlicked(directions.RIGHT): ''"  [disabled]="!showNext "   role="menuitem">Continue 
                   <i class="fa fa-arrow-right" style="margin-left: 10px" aria-hidden="true"></i> </button></a>
         </li>
-        <li *ngIf="showSubmit" class="label" [ngClass]="{'label--hide': !showSubmit}" >
-            <button   [disabled]="showSubmit" type="submit" role="menuitem"  >Submit  
+        <li *ngIf="showSubmit" class="list" [ngClass]="{'list--hide': !showSubmit}" >
+            <button class="list__button"  [disabled]="!showSubmit || disabled"  [ngClass]="{'list__button--disabled': disabled }" (click)="!disabled? formButtonSlicked(directions.RIGHT): ''" type="submit" role="menuitem"  >Submit  
                  <i class="fa fa-arrow-right" style="margin-left: 10px" aria-hidden="true"></i></button>
         </li>
     </ul>
