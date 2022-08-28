@@ -5,18 +5,21 @@ import { FormClientComponent } from '../components/form/components/form-client/f
 import { FormIdentityComponent } from '../components/form/components/form-identity/form-identity.component';
 import { FormComponent } from '../components/form/form.component';
 import { ProfileComponent } from '../containers/profile/profile.component';
+import { CanActivateGuard } from '../guard/formGuard';
 
 import { HomePageComponent } from '../pages/home-page/home-page.component';
 
 const routes: Routes = [
  { path: '', component: HomePageComponent, children: [{path: 'client-form/client', component: FormComponent,
-  children: [{path: '', component: FormClientComponent}, { path: 'address', component: FormAdressComponent}, { path: 'identity', component: FormIdentityComponent}]}]  }
+  children: [{path: '', component: FormClientComponent},
+   { path: 'address', component: FormAdressComponent, canActivate:[CanActivateGuard] }, { path: 'identity', component: FormIdentityComponent, canActivate:[CanActivateGuard]}]}]  }
 , {
   path: 'created-client', component: ProfileComponent
 }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: []
 })
 export class AppRoutingModule { }
