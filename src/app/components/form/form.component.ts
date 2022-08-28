@@ -34,12 +34,14 @@ export class FormComponent implements OnInit, OnDestroy {
 }
 
   
-
+overlayClicked(){
+  this.router.navigate(['/'])
+}
 ngOnDestroy(): void {
   this.unsubscribe$.next()
   this.unsubscribe$.complete()
 }
-  
+
 
 
 
