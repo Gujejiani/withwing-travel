@@ -11,6 +11,7 @@ import { UserService } from 'src/app/Service/user.service';
 })
 export class FormIdentityComponent  {
   dateValue = '2022-12-04'
+  registered: boolean = false
   constructor(private router: Router,private chRef:  ChangeDetectorRef, private userService: UserService) { }
   ngAfterViewInit(): void {
    
@@ -58,10 +59,14 @@ export class FormIdentityComponent  {
     if(this.identityForm.valid){
       this.userService.addUserInfo(this.identityForm.value)
       this.userService.saveUser()
-      this.router.navigate(['/created-client'])
+      this.registered =true
     }
   
     // 
+ }
+
+ navToProfile(){
+  this.router.navigate(['/created-client'])
  }
  inputChange(e: any){
   this.dateValue = e.target.value

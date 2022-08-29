@@ -1,4 +1,4 @@
-<form [formGroup]="identityForm"   class="form">
+<form [formGroup]="identityForm" [style]="{visibility: registered? 'hidden': 'visible'}"  class="form">
     <h3 class="form-title" >Identity</h3>
     <div class="form-control">
         <label  for="docType" class="form-control-label">Document Type</label>
@@ -12,12 +12,12 @@
     <div class="form-control">
         <label  for="Series" class="form-control-label">Series</label>
     
-    <input id="Series" formControlName="series"   [type]="'text'" class="form-control-input">
+    <input [style]="{display: registered? 'none': 'inline-block'}" id="Series" formControlName="series"   [type]="'text'" class="form-control-input">
     </div>
     <div class="form-control">
         <label  for="Number" class="form-control-label">Number</label>
     
-    <input id="Number"  [type]="'text'" formControlName="passportNumber"  class="form-control-input">
+    <input id="Number" [style]="{display: registered? 'none': 'inline-block'}"  [type]="'text'" formControlName="passportNumber"  class="form-control-input">
     </div>
     <div class="form-control">
         <label  for="issued" class="form-control-label">Issued By</label>
@@ -42,5 +42,7 @@
    
 
     <app-from-buttons  (formNavigated)="onSubmit($event)" [showPrev]="true" [disabled]="!identityForm?.valid" [showSubmit]="true" ></app-from-buttons>
-
+    
    </form>
+
+<app-message *ngIf="registered" (navToProfile)="navToProfile()" ></app-message>

@@ -25,6 +25,7 @@ import { FormClientComponent } from './components/form/components/form-client/fo
 import { FormAdressComponent } from './components/form/components/form-adress/form-adress.component';
 import { FormIdentityComponent } from './components/form/components/form-identity/form-identity.component';
 import { ProfileComponent } from './containers/profile/profile.component';
+import { MessageComponent } from './ui/message/message.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { ProfileComponent } from './containers/profile/profile.component';
     FormClientComponent,
     FormAdressComponent,
     FormIdentityComponent,
-    ProfileComponent
+    ProfileComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

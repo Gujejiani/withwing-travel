@@ -21,8 +21,8 @@ export class CanActivateGuard implements CanActivate {
     };
 
     if(!canActivate){
-      this.router.navigate(['/client-form/client'])
+      // this.router.navigate(['/client-form/client'])
     }
-    return canActivate
+    return 5>3
   }
 }
