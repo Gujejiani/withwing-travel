@@ -19,8 +19,6 @@ import { DestinationItemComponent } from './components/destinations/destination-
 import { FooterComponent } from './components/footer/footer.component';
 import { FormComponent } from './components/form/form.component';
 import { FormWrapperComponent } from './ui/form-wrapper/form-wrapper.component';
-import { InputComponent } from './ui/input/input.component';
-import { SelectorComponent } from './ui/selector/selector.component';
 import { FromButtonsComponent } from './ui/from-buttons/from-buttons.component';
 import { FormLoadingComponent } from './ui/form-loading/form-loading.component';
 import { FormClientComponent } from './components/form/components/form-client/form-client.component';
@@ -44,8 +42,6 @@ import { ProfileComponent } from './containers/profile/profile.component';
     FooterComponent,
     FormComponent,
     FormWrapperComponent,
-    InputComponent,
-    SelectorComponent,
     FromButtonsComponent,
     FormLoadingComponent,
     FormClientComponent,

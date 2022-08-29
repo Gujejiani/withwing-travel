@@ -151,6 +151,11 @@ a{
         i{
             position: absolute;
             right: 20px;
+         
+            @media only screen and (max-width: 600px) {
+                top: 35px;
+              
+              }
         }  
     }
     @include part('help'){
