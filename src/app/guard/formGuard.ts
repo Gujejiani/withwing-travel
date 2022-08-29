@@ -16,7 +16,7 @@ export class CanActivateGuard implements CanActivate {
   
     let canActivate = false
     if((route.url[0].path === 'address' && this.userService.getClientInfo()?.fullName) || (route.url[0].path === 'identity' && this.userService.getAddressInfo()?.index)){
-      console.log('done')
+      
       canActivate =true
     };
 

@@ -17,7 +17,7 @@ export class SliderArrowsComponent implements OnInit {
 
   arrowClicked(direction: Directions){
     this.sliderArrowClicked.emit(direction)
-    console.log(direction)
+  
   }
 
 

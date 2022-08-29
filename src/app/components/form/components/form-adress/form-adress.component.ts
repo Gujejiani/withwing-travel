@@ -76,11 +76,11 @@ export class FormAdressComponent implements OnInit, AfterViewInit {
     }else {
       mark.classList.remove('checkmark-selected--show')
     }
-    console.log(input.checked)
+
   }
 
   onSubmit(direction: Directions){
-    console.log(this.addressForm)
+  
     if(direction ===this.DIRECTION.RIGHT && this.addressForm.valid){
 
       this.router.navigate(['/client-form/client/identity'])

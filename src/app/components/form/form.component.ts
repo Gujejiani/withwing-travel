@@ -23,7 +23,7 @@ export class FormComponent implements OnInit, OnDestroy {
      */
    this.router.events.pipe(takeUntil(this.unsubscribe$), filter(ev=> ev instanceof NavigationEnd)).subscribe((urlInfo)=>{
     const nav = urlInfo as NavigationEnd
-      console.log(nav.url)
+  
     if(nav.url.includes('identity')){
       this.currentPage = this.FORM_PAGE.CLIENT_FORM_IDENTITY
     }else if(nav.url.includes('address')){

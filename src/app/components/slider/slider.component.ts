@@ -25,7 +25,7 @@ export class SliderComponent implements OnInit, AfterViewInit {
   }
 
   sliderArrowClicked(direction: Directions){
-    console.log(direction)
+  
     if(direction === this.direction.LEFT){
       this.moveSlider(this.direction.LEFT)
     }else {

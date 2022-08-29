@@ -33,7 +33,7 @@ addUserInfo (info: any){
 
     this.user = {...this.user, ...info}
     
-    console.log(this.user)
+    
 }
 
 
