@@ -22,7 +22,6 @@ export class FormClientComponent implements  AfterViewInit{
 
     if(clientInfo){
       const clGroups = clientInfo?.clientGroups
-      console.log(clientInfo)
       clientInfo.clientGroups = [];
       
       this.clientForm.setValue(clientInfo)
@@ -44,18 +43,13 @@ export class FormClientComponent implements  AfterViewInit{
     'birthDate': new FormControl(this.dateValue, Validators.required),
     'gender': new FormControl('Male'),
     'phoneNumber': new FormControl(null, [Validators.required,Validators.maxLength(11), Validators.minLength(11), Validators.pattern('^[0-9]*$')]),
-    
     'coordinator': new FormControl('Jurgen Klop', Validators.required),
     'notSendSms': new FormControl(false, Validators.required),
     'clientGroups': new FormArray([], Validators.required)
   })
 
 
-  // inputChange(data: {value: string, type: InputTypes}){
-  //   if(data.type==='date'){
-  //     this.dateValue = data.value
-  //   }
-  // }
+
 
 
   smsCheckBoxCLicked(event: Event){
@@ -71,7 +65,6 @@ export class FormClientComponent implements  AfterViewInit{
     }else {
       mark.classList.remove('checkmark-selected--show')
     }
-    console.log(input.checked)
   }
 
   dateClicked(){
@@ -98,7 +91,7 @@ export class FormClientComponent implements  AfterViewInit{
 
 
    onCheckboxChange(e: any) {
-    console.log(e.target.value)
+   
     const checkArray: FormArray = this.clientForm.get('clientGroups') as FormArray;
     if (e.target.checked) {
       checkArray.push(new FormControl(e.target.value));
@@ -114,13 +107,17 @@ export class FormClientComponent implements  AfterViewInit{
     }
   }
 
-
+/**
+ * 
+ * @param clientGroups already chosen client groups
+ * @description - add them to back formsArray
+ */
   addClientGroups(clientGroups: string[]){
     const checkArray: FormArray = this.clientForm.get('clientGroups') as FormArray;
     
     if (clientGroups.length) {
-      console.log('added')
-      clientGroups.forEach((client: string)=>{
+    
+       clientGroups.forEach((client: string)=>{
         checkArray.push(new FormControl(client));
         const className = client.split(' ')[0]
        

@@ -164,6 +164,11 @@ a{
         color: #dc3545;
         left: 40%;
         font-size: 13px;
+        @media only screen and (max-width: 600px) {
+        left: 0;
+           
+        
+              }
     }
 }
 

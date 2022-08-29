@@ -18,6 +18,9 @@ export class FormComponent implements OnInit, OnDestroy {
   currentPage = FormPage.CLIENT_FORM
   constructor( private router: Router) { }
   ngOnInit(): void {
+    /**
+     * for loading -> to determine on which page we are
+     */
    this.router.events.pipe(takeUntil(this.unsubscribe$), filter(ev=> ev instanceof NavigationEnd)).subscribe((urlInfo)=>{
     const nav = urlInfo as NavigationEnd
       console.log(nav.url)

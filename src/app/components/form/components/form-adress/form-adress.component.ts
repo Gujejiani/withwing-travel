@@ -89,10 +89,8 @@ export class FormAdressComponent implements OnInit, AfterViewInit {
       this.router.navigate(['/client-form/client/'])
     }
   
-    // 
+    
  }
 
- buttonClicked(direction: Directions){
-  console.log(direction)
- }
+ 
 }

@@ -12,7 +12,8 @@ import { HomePageComponent } from '../pages/home-page/home-page.component';
 const routes: Routes = [
  { path: '', component: HomePageComponent, children: [{path: 'client-form/client', component: FormComponent,
   children: [{path: '', component: FormClientComponent},
-   { path: 'address', component: FormAdressComponent, canActivate:[CanActivateGuard] }, { path: 'identity', component: FormIdentityComponent, canActivate:[CanActivateGuard]}]}]  }
+   { path: 'address', component: FormAdressComponent, canActivate:[CanActivateGuard] }, 
+   { path: 'identity', component: FormIdentityComponent, canActivate:[CanActivateGuard]}]}]  }
 , {
   path: 'created-client', component: ProfileComponent
 }];

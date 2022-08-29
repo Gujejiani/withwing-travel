@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Directions } from 'src/app/models/directions';
@@ -9,7 +9,7 @@ import { UserService } from 'src/app/Service/user.service';
   templateUrl: './form-identity.component.html',
   styleUrls: ['./form-identity.component.scss']
 })
-export class FormIdentityComponent implements OnInit {
+export class FormIdentityComponent  {
   dateValue = '2022-12-04'
   constructor(private router: Router,private chRef:  ChangeDetectorRef, private userService: UserService) { }
   ngAfterViewInit(): void {
@@ -40,8 +40,6 @@ export class FormIdentityComponent implements OnInit {
 
 
   DIRECTION = Directions
-  ngOnInit(): void {
-  }
 
   onFileChange(event: any) {
   
@@ -53,7 +51,6 @@ export class FormIdentityComponent implements OnInit {
     }
   }
   onSubmit(direction: Directions){
-    console.log(this.identityForm)
     if(direction ===this.DIRECTION.LEFT){
 
       this.router.navigate(['/client-form/client/address'])
