@@ -11,9 +11,9 @@ export class CanActivateGuard implements CanActivate {
 
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
+    _state: RouterStateSnapshot
   ): Observable<boolean|UrlTree>|Promise<boolean|UrlTree>|boolean|UrlTree {
-    const user = this.userService.getAddressInfo
+  
     let canActivate = false
     if((route.url[0].path === 'address' && this.userService.getClientInfo()?.fullName) || (route.url[0].path === 'identity' && this.userService.getAddressInfo()?.index)){
       console.log('done')
